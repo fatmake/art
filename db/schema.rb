@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_12_25_233244) do
 
-  create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.string "style"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_12_25_233244) do
     t.string "img"
   end
 
-  create_table "artworks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "artworks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "date"
     t.string "price"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_12_25_233244) do
     t.index ["Artist_id"], name: "index_artworks_on_Artist_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
