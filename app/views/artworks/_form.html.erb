@@ -1,0 +1,30 @@
+<%= form_for @artwork do |f| %>
+<br><br>
+    <%= f.hidden_field :Artist_id, :value => @artist.id %>
+    <div class="input-field col s6 white">
+        <%= f.label :img, 'Image' %>
+        <%= f.text_field :img %>
+    </div>
+    <br>
+    <div class="input-field col s6 white">
+        <%= f.label :title, 'Title' %>
+        <%= f.text_field :title %>
+    </div>
+    <br>
+    <div class="input-field col s6 white">
+        <%= f.label :date, 'Date' %>
+        <%= f.text_field :date %>
+    </div>
+    <br>
+    <div class="input-field col s6 white">
+        <%= f.label :price, 'Price' %>
+        <%= f.text_field :price %>
+    </div>
+    <br>
+    <div class="input-field col s6 white">
+        <%= f.label :artwork_type, 'Type' %>
+        <%= f.text_field :artwork_type %>
+    </div>
+    <br><br>
+    <%= f.submit "Submit", :class => "btn waves-effect waves-light white" %>
+  <% end %>

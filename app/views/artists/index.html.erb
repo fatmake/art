@@ -1,0 +1,36 @@
+
+<br>
+<h1 class='white'> An Art Gallery</h1> <h1 class='white'>Where You Can View Your Favourite</h1><h1 class='white'> Artists And Thier Artwork</h1>
+
+<br><br>
+
+<% if current_user.email == "fatmakelantan@outlook.com"%>
+<div class='brown'><%= link_to "",  new_artist_path,  class: "glyphicon glyphicon-plus-sign text-secondary" %>Add a new Artist</div> 
+<% end %>
+
+<div class="table-responsive">
+<table class="striped bordered table">
+
+   
+    <tr>
+    <% @artists.each do |a| %>
+        
+            <td>
+            <div class='facts-box text-center'>
+            <div ><%= link_to a.name, artist_path(a), class:'title highlighted' %></div>
+            <div><%= image_tag(a.img, size: "150x200", alt: "Artist Photo", class:"rounded mx-auto d-block") %></div>
+            <div class='brown'><%= a.age %></div>
+            <div class='brown'><%= a.style %></div>
+            <hr/>
+         <% if current_user.email == "fatmakelantan@outlook.com"%>
+            <div><%= link_to "", edit_artist_path(a),  class:"glyphicon glyphicon-edit text-secondary" %>
+            <%= link_to "", artist_path(a), class: "glyphicon glyphicon-trash text-secondary", :method => :delete, data: { confirm: "Are you sure?" }%></div>
+         <% end %>
+         </div>
+            </td>
+        
+    <% end %>
+    </tr>
+    
+</table>
+</div>

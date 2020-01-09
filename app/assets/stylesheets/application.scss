@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .facts-box {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+.facts-box:hover {
+    border-top: 6px solid #6d6e5d;
+
+}
+
+div {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #685642;
+}
+
+html,body {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1563674881-8abcee2b556a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+}
+
+.white {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brown {
+    color: #685642;
+}
+
+.aqua {
+    color:#76988F;
+    font-weight: bold;
+}
+
+.highlighted {
+    color: #F4F0CB;
+    
+
+}
+
+
+hr {
+    color: gray;
+}
+
+table td 
+{
+  table-layout:fixed;
+  width:20px;
+
+  word-wrap:break-word;
+}

@@ -1,0 +1,33 @@
+<br>
+<h1 class='white'><%= @artist.name %>'s Artwork</h1>
+<br><br>
+
+<% if current_user.email == "fatmakelantan@outlook.com"%>
+<div class='brown'><%= link_to " New Artwork" , new_artwork_path(:Artist_id => @artist.id), class: "glyphicon glyphicon-plus-sign text-secondary"%></div>
+<% end %>
+
+
+<div class="table-responsive">
+<table class="striped bordered table">
+
+ <tr>
+    <% @artist.artworks.each do |artwork| %>
+        <td>
+            <div class='facts-box text-center'>
+            <div class='highlighted'><%= artwork.title %></div>
+            <div><%= image_tag(artwork.img, size: "100x100", alt: "Painting Image") %></div>
+            <div class='brown'><%= artwork.date %></div>
+            <div class='brown'><%= artwork.artwork_type %></div>
+            <div class='brown'><%= artwork.price %></div>
+            <hr/>
+        <% if current_user.email == "fatmakelantan@outlook.com" %>
+            <div><%= link_to "", artwork_edit_path(artwork.id,:Artist_id => @artist.id), class: "glyphicon glyphicon-edit"%>
+            <%= link_to "", artist_path(artwork), class: "glyphicon glyphicon-trash", :method => :delete, data: { confirm: "Are you sure?" }%></div>
+        <% end %>
+            </div>
+        </td>
+    <% end %>
+   </tr> 
+</table>
+
+<%= link_to 'Back', artists_path, class: 'glyphicon glyphicon-chevron-left highlighted'%>
