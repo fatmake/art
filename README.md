@@ -7,6 +7,8 @@ An art gallery app where the user can view many Artists And Thier Artworks,The a
 
 * Ruby
 
+* Ruby on Rails
+
 * css
 
 * HTML
