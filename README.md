@@ -1,7 +1,7 @@
 
 # Art Gallery
 
-An art gallery app where the user can view many artists and thier artworks,The admin can edit,delete and add artists or artworks
+An art gallery website where the user can view many artists and their artworks,The admin can edit, delete and add artists or artworks.
 
 # Used Environments
 
